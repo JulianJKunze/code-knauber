@@ -1,11 +1,15 @@
 # Setup
 
-- [x] svelte kit
-- [x] prettier
-- [x] github repository
-- [x] eslint
-- [x] tailwindcss
-- [ ] daisy ui
+- svelte kit
+- prettier
+- github repository
+- eslint
+- tailwindcss
+- daisy ui
+
+# Personal page
+
+Create page
 
 # Idea dump
 
