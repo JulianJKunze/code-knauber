@@ -4,7 +4,7 @@
 - [x] prettier
 - [x] github repository
 - [x] eslint
-- [ ] tailwindcss
+- [x] tailwindcss
 - [ ] daisy ui
 
 # Idea dump
