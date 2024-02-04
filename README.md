@@ -9,7 +9,7 @@
 
 # General todos
 
--[ ] install prettier for tailwind
+- [ ] install prettier for tailwind
 
 # Personal page
 
