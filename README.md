@@ -7,9 +7,11 @@
 - tailwindcss
 - daisy ui
 
-# Personal page
+# General todos
 
-Create page
+-[ ] install prettier for tailwind
+
+# Personal page
 
 # Idea dump
 
