@@ -20,9 +20,9 @@
 
 <div
 	on:click={() => dispatch('dieClicked')}
-	class="shrink w-24 border-4 rounded-3xl
+	class="w-24 shrink rounded-[24px] border-4
   		{canSelectDie ? 'cursor-pointer' : ''}
-  		{isKept ? 'border-primary' : 'border-transparent'}"
+  		{isKept ? 'border-neutral-content' : 'border-transparent'}"
 >
 	{@html dieSvgStrings[eyes - 1]}
 </div>

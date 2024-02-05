@@ -32,13 +32,13 @@
 </script>
 
 <main class="flex justify-center">
-	<div class="flex flex-col space-y-5 j w-144">
-		<h1 class="text-center text-3xl text-bold">Let's play Yahtzee</h1>
-		<button class="btn btn-lg btn-primary" disabled={lastRoll === 3} on:click={rollDies}>
+	<div class="flex w-144 flex-col space-y-10">
+		<h1 class="text-bold text-center text-3xl">Let's play Yahtzee</h1>
+		<button class="btn btn-primary btn-lg" disabled={lastRoll === 3} on:click={rollDies}>
 			{rollMessage[lastRoll]}</button
 		>
 
-		<div class="flex h-24 space-x-5 justify-between content-center">
+		<div class="flex h-24 content-center justify-between space-x-5">
 			{#if lastRoll !== 0}
 				{#each diceIds as dieId}
 					<Die
