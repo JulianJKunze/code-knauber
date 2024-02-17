@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   fill="currentColor"
+   viewBox="0 0 256 256"
+   id="Flat"
+   version="1.1"
+
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs187" />
+  <path
+     d="M 192,28 H 64 C 44.127026,28.02238 28.02238,44.127026 28,64 v 128 c 0.02238,19.87297 16.127026,35.97762 36,36 h 128 c 19.87297,-0.0224 35.97762,-16.12703 36,-36 V 64 C 227.97762,44.127026 211.87297,28.02238 192,28 Z m 12,164 c -0.007,6.62442 -5.37558,11.99277 -12,12 H 64 C 57.37558,203.993 52.007231,198.62442 52,192 V 64 c 0.0072,-6.62442 5.37558,-11.992769 12,-12 h 128 c 6.62442,0.0072 11.99277,5.37558 12,12 z"
+     id="path182" />
+</svg>

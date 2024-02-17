@@ -2,7 +2,7 @@
 	import Die from './Die.svelte';
 	import Table from './Table.svelte';
 
-	const infiniteRollsPossible = true;
+	const infiniteRollsPossible = false;
 
 	const eyes = [0, 0, 0, 0, 0];
 	const diceIds = [0, 1, 2, 3, 4];
@@ -31,30 +31,26 @@
 	}
 </script>
 
-<!-- TODO: extend the content to the height of the screen on desktop
-Additionally, let it fill the window in mobile view -->
-<main class="flex justify-center">
-	<div class="flex w-144 flex-col space-y-10">
-		<h1 class="text-bold text-center text-3xl">Let's play Yahtzee</h1>
+<div class="flex justify-center">
+	<div class="flex max-w-screen-md grow flex-col space-y-8">
+		<h1 class="text-bold text-center text-3xl">Let's play Yahtzee !</h1>
 		<button class="btn btn-primary btn-lg" disabled={lastRoll === 3} on:click={rollDies}>
 			{rollMessage[lastRoll]}</button
 		>
 
-		<div class="flex h-24 content-center justify-between space-x-5">
-			{#if lastRoll !== 0}
-				{#each diceIds as dieId}
-					<Die
-						eyes={eyes[dieId]}
-						isKept={isKept[dieId]}
-						canSelectDie={canSelectDies}
-						on:dieClicked={() => toggleDieState(dieId)}
-					></Die>
-				{/each}
-			{/if}
+		<div class="flex grow content-center justify-between space-x-6">
+			{#each diceIds as dieId}
+				<Die
+					eyes={eyes[dieId]}
+					isKept={isKept[dieId]}
+					canSelectDie={canSelectDies}
+					on:dieClicked={() => toggleDieState(dieId)}
+				></Die>
+			{/each}
 		</div>
 
 		<div>
 			<Table {eyes}></Table>
 		</div>
 	</div>
-</main>
+</div>

@@ -3,6 +3,7 @@
 
 <script>
 	import { createEventDispatcher } from 'svelte';
+	import die0 from '$lib/assets/die0.svg?raw';
 	import die1 from '$lib/assets/die1.svg?raw';
 	import die2 from '$lib/assets/die2.svg?raw';
 	import die3 from '$lib/assets/die3.svg?raw';
@@ -15,15 +16,16 @@
 	export let eyes;
 	export let isKept;
 	export let canSelectDie;
-	const dieSvgStrings = [die1, die2, die3, die4, die5, die6];
+	const dieSvgStrings = [die0, die1, die2, die3, die4, die5, die6];
 </script>
 
 <!-- TODO: Nicer border when selected -->
 <div
 	on:click={() => dispatch('dieClicked')}
-	class="w-24 shrink rounded-[24px] border-4
+	class="spaxe-x-2 flex-grow rounded-[8px]
+		{eyes == 0 ? 'text-neutral' : ''}
   		{canSelectDie ? 'cursor-pointer' : ''} 
-  		{isKept ? 'border-neutral-content' : 'border-transparent'}"
+  		{isKept ? 'bg-primary bg-opacity-30' : ''}"
 >
-	{@html dieSvgStrings[eyes - 1]}
+	{@html dieSvgStrings[eyes]}
 </div>

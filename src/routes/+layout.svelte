@@ -8,4 +8,6 @@
 	<a class="btn" href="/yahtzee">Yahtzee</a>
 </nav>
 
-<slot />
+<main class="p-4">
+	<slot />
+</main>
