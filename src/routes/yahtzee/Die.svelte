@@ -18,10 +18,11 @@
 	const dieSvgStrings = [die1, die2, die3, die4, die5, die6];
 </script>
 
+<!-- TODO: Nicer border when selected -->
 <div
 	on:click={() => dispatch('dieClicked')}
 	class="w-24 shrink rounded-[24px] border-4
-  		{canSelectDie ? 'cursor-pointer' : ''}
+  		{canSelectDie ? 'cursor-pointer' : ''} 
   		{isKept ? 'border-neutral-content' : 'border-transparent'}"
 >
 	{@html dieSvgStrings[eyes - 1]}

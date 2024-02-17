@@ -9,8 +9,6 @@
 
 # General todos
 
-- [ ] install prettier for tailwind
-
 # Personal page
 
 # Idea dump

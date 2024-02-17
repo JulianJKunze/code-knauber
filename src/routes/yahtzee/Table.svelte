@@ -26,7 +26,27 @@
 	}
 
 	function calculateLowerSectionPoints(eyes) {
-		return Array(7).fill(0);
+		const points = Array(7).fill('');
+		const occurences = getOccurences(eyes);
+		points[0] = Math.max(...occurences) >= 3 ? sumOfEyes(eyes) : 0;
+		points[1] = Math.max(...occurences) >= 4 ? sumOfEyes(eyes) : 0;
+		points[2] = occurences.includes(2) & occurences.includes(3) ? 25 : 0;
+
+		points[5] = Math.max(...occurences) >= 5 ? 50 : 0;
+		points[6] = sumOfEyes(eyes);
+		return points;
+	}
+
+	function getOccurences(eyes) {
+		let occurence = Array(6);
+		for (let i = 1; i <= 6; i++) {
+			occurence[i - 1] = eyes.filter((dieNumber) => dieNumber == i).length;
+		}
+		return occurence;
+	}
+
+	function sumOfEyes(eyes) {
+		return eyes.reduce((accumulator, currentValue) => accumulator + currentValue);
 	}
 </script>
 
@@ -34,8 +54,8 @@
 	<table class="table table-lg text-xl">
 		{#each upperSectionLabels as upperSectionLabel, i}
 			<tr>
-				<td class=" border-y p-2 text-left">{upperSectionLabel}</td>
-				<td class=" border-y p-2 text-right">{upperSectionPoints[i]}</td>
+				<td class="border-y p-2 text-left">{upperSectionLabel}</td>
+				<td class="border-y p-2 text-right">{upperSectionPoints[i]}</td>
 			</tr>
 		{/each}
 	</table>
@@ -43,8 +63,8 @@
 	<table class="table table-lg text-xl">
 		{#each lowerSectionLabels as lowerSectionLabel, i}
 			<tr>
-				<td class=" border-y p-2 text-left">{lowerSectionLabel}</td>
-				<td class=" border-y p-2 text-right">{lowerSectionPoints[i]}</td>
+				<td class="border-y p-2 text-left">{lowerSectionLabel}</td>
+				<td class="border-y p-2 text-right">{lowerSectionPoints[i]}</td>
 			</tr>
 		{/each}
 	</table>

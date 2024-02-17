@@ -2,7 +2,7 @@
 	import Die from './Die.svelte';
 	import Table from './Table.svelte';
 
-	const infiniteRollsPossible = false;
+	const infiniteRollsPossible = true;
 
 	const eyes = [0, 0, 0, 0, 0];
 	const diceIds = [0, 1, 2, 3, 4];
@@ -31,6 +31,8 @@
 	}
 </script>
 
+<!-- TODO: extend the content to the height of the screen on desktop
+Additionally, let it fill the window in mobile view -->
 <main class="flex justify-center">
 	<div class="flex w-144 flex-col space-y-10">
 		<h1 class="text-bold text-center text-3xl">Let's play Yahtzee</h1>
